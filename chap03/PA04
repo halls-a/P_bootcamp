@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+
+	double f, k;
+
+	printf("힘(N)? ");
+	scanf_s("%lf", &f);
+
+	printf("이동거리(m)? ");
+	scanf_s("%lf", &k);
+
+	printf("일의 양: %.2lf J", k * f);
+
+	return 0;
+}
