@@ -1,0 +1,9 @@
+#include <stdio.h>
+#define PI 3.14159265
+
+int main() {
+
+	printf("pi: %.2lf\npi: %.4lf\npi: %.6lf\npi: %.8lf\npi: %e\n", PI, PI, PI, PI, PI);
+
+	return 0;
+}
