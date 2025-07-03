@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+
+	int length;
+	
+	printf("한 변의 길이? ");
+	scanf_s("%d", &length);
+
+	printf("정사각형의 넓이: %d \n정사각형의 둘레: %d", length * length, 4 * length);
+
+	return 0;
+}
