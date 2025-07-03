@@ -1,0 +1,14 @@
+#include <stdio.h>
+#define change 0.45359237
+
+int main() {
+
+	int m;
+
+	printf("무게(lb)? ");
+	scanf_s("%d", &m);
+
+	printf("%d lb = %lf kg", m, m * change);
+
+	return 0;
+}
