@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+
+	double num;
+
+	printf("실수? ");
+	scanf_s("%lf", &num);
+
+	printf("제곱: %e\n세제곱: %e", num * num, num * num * num);
+
+	return 0;
+}
