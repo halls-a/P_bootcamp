@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main() {
+
+	int amount;
+	char size;
+
+	printf("커피 사이즈(S,T,G)와 주문 수량? ");
+	scanf("%c %d", &size, &amount);
+
+	printf("%c 사이즈 %d잔을 주문합니다.", size, amount);
+
+
+	return 0;
+}
