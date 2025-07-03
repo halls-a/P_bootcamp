@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+
+	int h, l;
+
+	printf("가로의 길이? ");
+	scanf_s("%d", &l);
+
+	printf("세로의 길이? ");
+	scanf_s("%d", &h);
+
+	printf("직사각형의 넓이: %d\n직사각형의 둘레: %d", l * h, 2 * (l + h));
+
+	return 0;
+}
