@@ -1,0 +1,14 @@
+#include <stdio.h>
+#define Change 2.54
+
+int main() {
+
+	double l;
+
+	printf("길이(inch)? ");
+	scanf_s("%lf", &l);
+
+	printf("%lf inch = %lf cm", l, l * Change);
+
+	return 0;
+}
