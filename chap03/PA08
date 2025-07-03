@@ -1,0 +1,14 @@
+#include <stdio.h>
+#define change 0.9144
+
+int main() {
+
+	int l;
+
+	printf("길이(yd)? ");
+	scanf_s("%d", &l);
+
+	printf("%d yd = %lf m", l, l * change);
+
+	return 0;
+}
