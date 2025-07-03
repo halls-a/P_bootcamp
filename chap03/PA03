@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+
+	double m, h;
+
+	printf("질량(kg)? ");
+	scanf_s("%lf", &m);
+
+	printf("높이(m)? ");
+	scanf_s("%lf", &h);
+
+	printf("위치에너지: %lf J", 9.8 * m * h);
+
+	return 0;
+}
