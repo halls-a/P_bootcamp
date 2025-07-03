@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+
+	double a, b;
+
+	printf(" 실수 2개? ");
+	scanf_s("%lf %lf", &a, &b);
+
+	printf("%lf + %lf = %lf\n", a, b, a + b);
+	printf("%lf - %lf = %lf", a, b, a - b);
+
+	return 0;
+}
