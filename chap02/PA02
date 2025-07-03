@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+
+	int num;
+	double score;
+
+	printf("번호? ");
+	scanf_s("%d", &num);
+
+	printf("학점? ");
+	scanf_s("%lf", &score);
+
+	printf("%d번 학생의 학점은 %.2lf입니다", num, score);
+
+	return 0;
+}
