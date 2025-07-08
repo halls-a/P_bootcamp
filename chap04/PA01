@@ -1,0 +1,20 @@
+/*질량과 속력을 실수로 입력받아 운동 에너지를 구하는 프로그램을 작성하시오. 
+질량은 kg 단위, 속력은 m/s 단위로 입력받는다.*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	double m, v;
+
+	printf("질량(kg)? ");
+	scanf("%lf", &m);
+
+	printf("속력(m/s)? ");
+	scanf("%lf", &v);
+
+	printf("운동에너지: %.2lf J", (1.0 / 2.0) * m * (v * v));
+
+	return 0;
+}
