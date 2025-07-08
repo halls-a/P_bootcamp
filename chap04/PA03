@@ -1,0 +1,21 @@
+/*질량과 부피를 실수로 입력받아 밀도를 구하는 프로그램을 작성하시오. 
+질량은 g 단위로 입력받고, 부피는 ㎤ 단위로 입력받는다.*/
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	double a, b;
+
+	printf("질량(g)? ");
+	scanf("%lf", &a);
+
+	printf("부피(㎤)? ");
+	scanf("%lf", &b);
+
+	printf("밀도: %lf", a / b);
+
+	return 0;
+}
