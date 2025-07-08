@@ -1,0 +1,22 @@
+/*용매의 질량과 용질의 질량을 정수로 입력받아 용액의 퍼센트 농도를 구하는 프로그램을 작성하시오.*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	int a, b;
+	double c;
+
+	printf("용매(g)? ");
+	scanf("%d", &a);
+
+	printf("용질(g)? ");
+	scanf("%d", &b);
+
+	c = (b / (a + b)) * 100;
+
+	printf("농도: %lf", c);
+
+	return 0;
+}
