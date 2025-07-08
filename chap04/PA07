@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+	int m, h;
+	double l;
+
+	printf("밑변? ");
+	scanf("%d", &m);
+
+	printf("높이? ");
+	scanf("%d", &h);
+
+	l = (m * m) + (h * h);
+
+	printf("%lf", sqrt(l));
+
+	return 0;
+}
