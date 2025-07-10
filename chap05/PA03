@@ -1,0 +1,43 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	int price, o_man = 0, man = 0, o_chun = 0, chun = 0, baek = 0, sheep = 0;
+
+	printf("거스름돈? ");
+	scanf("%d", &price);
+	
+	price = price / 10 * 10;
+
+	printf("거스름돈(10원 미만 절사): %d\n", price);
+
+	if (price > 50000) {
+		o_man = price / 50000;
+		price %= 50000;
+		if (price > 10000) {
+			man = price / 10000;
+			price %= 10000;
+			if (price > 5000) {
+				o_chun = price / 5000;
+				price %= 5000;
+				if (price > 1000) {
+					chun = price / 1000;
+					price %= 1000;
+					if (price > 100) {
+						baek = price / 100;
+						price %= 100;
+						if (price > 10) {
+							sheep = price / 10;
+							price %= 10;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	printf("50000원 %d장\n10000원 %d장\n5000원 %d장\n1000원 %d장\n100원 %d개\n10원 %d개\n", o_man, man, o_chun, chun, baek, sheep);
+
+	return 0;
+}
