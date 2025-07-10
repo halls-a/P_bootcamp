@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	double hw, mm, wd, buy;
+
+	printf("원/달러 매매기준율? ");
+	scanf("%lf", &mm);
+
+	printf("환율우대율(0~100%)? ");
+	scanf("%lf", &wd);
+
+	//hw = mm + (mm * 1.75 * (100 - wd));
+	hw = mm + (mm * (175 / 10000) * (1.0 - wd / 100.0));
+
+	printf("달러 살 때 환율은 %lf입니다.\n", hw);
+
+	printf("구입할 달러(USD)? ");
+	scanf("%lf", &buy);
+
+	printf("USD %.2lf 살 때 ==> KRW %.2lf", buy, buy * hw);
+
+	return 0;
+}
