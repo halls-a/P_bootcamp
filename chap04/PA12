@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	double min, m, v;
+
+	printf("이동 거리(km)? ");
+	scanf("%lf", &m);
+
+	printf("예상 속력(km/h)? ");
+	scanf("%lf", &v);
+
+	min = (m / v) * 60;
+
+	printf("도착까지 예상 소요 시간은 %d분 입니다.", (int)min);
+
+	return 0;
+}
