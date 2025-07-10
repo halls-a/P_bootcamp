@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	int base_fee, use, fee;
+
+
+	printf("기본 요금? ");
+	scanf("%d", &base_fee);
+
+	printf("월 사용량(kWh)? ");
+	scanf("%d", &use);
+
+	fee = base_fee + use * 190;
+
+	printf("전기 요금: %d원", fee);
+
+	return 0;
+}
