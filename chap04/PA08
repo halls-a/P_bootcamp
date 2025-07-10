@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS
+#define PI 3.141592
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+	int r;
+
+	printf("반지름의 길이? ");
+	scanf("%d", &r);
+
+	double c = pow(r, 3);
+
+	printf("구의 부피: %lf", c * 4/3 * PI);
+
+	return 0;
+}
