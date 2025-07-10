@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	double flite;
+	int min, hour, day;
+
+
+	printf("비행 소요시간? ");
+	scanf("%lf", &flite);
+
+	min = flite * 60;
+
+	day = min / (24 * 60);
+
+	min = min % (24 * 60);
+
+	hour = min / 60;
+
+	min = min % 60;
+
+	printf("비행 소요시간은 %d일 %d시간 %d분입니다.", day, hour, min);
+
+	return 0;
+}
