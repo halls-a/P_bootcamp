@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	int price1, price2, dc_price = 0;
+	double dc;
+
+	printf("제품의 가격? ");
+	scanf("%d", &price1);
+
+	printf("할인율(%)? ");
+	scanf("%lf", &dc);
+
+	price2 = price1 * ((100 - dc) / 100);
+
+	dc_price = price1 - price2;
+
+	printf("할인가: %d원 (%d원 할인)", price2, dc_price);
+
+	return 0;
+}
