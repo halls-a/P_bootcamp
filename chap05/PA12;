@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	static double base_money = 0;
+	double year;
+
+	printf("원금? ");
+	scanf("%d", &base_money);
+
+	printf("연이율(%)? ");
+	scanf("%lf", &year);
+
+	for (int i = 0; i < 10; i++) {
+		printf("%d년째 이자:  %.2lf, 원리합계: %.2lf\n", i + 1, base_money * (25 / 1000), base_money + (base_money * (25 / 1000)));
+		base_money = base_money * (1 + year);
+	}
+
+	return 0;
+}
