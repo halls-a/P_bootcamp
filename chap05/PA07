@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	int use, base;
+
+	printf("월 사용량(kWh)? ");
+	scanf("%d", &use);
+
+	if (use <= 200) {
+		use = use * 93.3;
+		base = 910;
+	}
+	else if (200 < use <= 400) {
+		use -= 200;
+		use = use * 187.9 + (200 * 93.3);
+		base = 1600;
+	}
+	else {
+		use -= 400;
+		use = (use * 280.6 + (200 * 93.3) + (200 * 187.9));
+		base = 7300;
+	}
+
+	printf("전기 요금 합계: %d원\n - 기본 요금: %d원\n -전력량요금: %d원", use + base, base, use);
+
+	return 0;
+}
