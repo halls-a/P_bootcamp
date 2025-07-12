@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+double get_area_of_square(double length);
+
+int main() {
+
+	double length;
+
+	printf("한 변의 길이: ");
+	scanf("%lf", &length);
+
+	get_area_of_square(length);
+
+	printf("정사각형의 면적: %lf", get_area_of_square);
+
+	return 0;
+}
+
+double get_area_of_square(double length) {
+
+	double square;
+	square = length * length;
+
+	return square;
+}
