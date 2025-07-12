@@ -1,60 +1,25 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int input();
-int temperature();
-
 int main() {
 
-	input();
-
-	return 0;
-}
-
-int input() {
-
-	int input;
-	char CF;
+	int temp1;
+	double temp2;
+	char way1, way2;
 
 	printf("온도? ");
-	scanf("%d %c", &input, &CF);
+	scanf("%d %c", &temp1, &way1);
 
-	temperature(input,CF);
-
-	if (temperature == 'E') {
-		output('E', temperature);
+	if (way1 == 'F') {
+		temp2 = ((double)temp1 - 32) * 5 / 9;
+		way2 = 'C';
 	}
 	else {
-		output('G', temperature);
-	}
-}
-
-int temperature(double temp, char CF) {
-
-	char error = 'E';
-	
-	if (CF == 'C') {
-		temp = (temp * (9 / 5)) + 32;
-
-		return temp;
-	}
-	else if (CF == 'F') {
-		temp = (temp - 32) * 5 / 9;
-
-		return temp;
-	}
-	else {
-		return error;
-	}
-}
-
-int output(char way, double temp1, double temp2) {
-
-	if (way == 'E') {
-		printf("잘못 된 입력입니다.");
-	}
-	else {
-		printf("%.2lf %c ==> %.2lf %c", temp1, );
+		temp2 = ((double)temp1 * (9 / 5)) + 32;
+		way2 = 'F';
 	}
 
+	printf("%.2lf %c ==> %.2lf %c", (double)temp1, way1, temp2, way2);
+
+	return 0;
 }
