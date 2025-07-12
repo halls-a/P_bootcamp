@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	int h_amount, p_amount, c_amount, set = 0;
+
+	printf("[햄버거 4000원, 감자튀김 2000원, 콜라 1500원, 세트 6500원]\n");
+	printf("햄버거 개수? ");
+	scanf("%d", &h_amount);
+	
+	printf("감자튀김 개수? ");
+	scanf("%d", &p_amount);
+	
+	printf("콜라 개수? ");
+	scanf("%d", &c_amount);
+
+	while (h_amount == 0 || c_amount == 0 || p_amount = 0) {
+		h_amount -= 1;
+		p_amount -= 1;
+		c_amount -= 1;
+		set++;
+	}
+
+	printf("\n상품명\t\t단가\t수량\t금액\n세트\t\t%d\t%d\t%d\n햄버거\t\t%d\t%d\t%d\n감자튀김\t%d\t%d\t%d\n-----------------------------------------\n합계\t\t\t\t%d", 6500, set, 6500 * set, 4000, h_amount, h_amount * 4000, 2000, p_amount, p_amount * 2000, 6500 * set + h_amount * 4000 + p_amount * 2000);
+
+	return 0;
+}
