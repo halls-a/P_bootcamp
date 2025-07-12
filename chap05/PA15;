@@ -1,0 +1,38 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	static int salary;
+	int hour, day, duty;
+
+	printf("시간당 급여? ");
+	scanf("%d", &salary);
+
+	printf("일일 근무 시간? ");
+	scanf("%d", &hour);
+
+	printf("일일 근무 일수? ");
+	scanf("%d", &day);
+
+	printf("세금 적용 여부\n1: 미적용\n2: 4대보험공제(8.41%)\n3: 소득세공제(3.3%)\n");
+	scanf("%d", &duty);
+
+	salary = salary * hour * day;
+
+	switch (duty)
+	{
+	case 1:
+		break;
+	case 2:
+		salary = salary - (salary * (841 / 10000));
+		break;
+	case 3:
+		salary = salary - (salary * (33 / 1000));
+		break;
+	}
+
+	printf("예상 월급여: %d원", salary);
+
+	return 0;
+}
