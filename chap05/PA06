@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	int sq;
+	char way1, way2;
+
+	printf("넓이? ");
+	scanf("%d %c", &sq, &way1);
+
+	if (way1 == 'p') {
+		printf("%.2lf 평 ==> %.2lf 제곱미터", sq, sq * 3.305785);
+	}
+	else {
+		printf("%.2lf 제곱미터 ==> %.2lf 평", (double)sq, sq * 0.3025);
+	}
+
+	return 0;
+}
