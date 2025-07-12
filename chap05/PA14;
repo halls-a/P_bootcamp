@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	double v, min, dis;
+
+	printf("구간 단속 소요 시간 (분)? ");
+	scanf("%d", &min);
+
+	printf("구간 단속 주행 거리 (km)? ");
+	scanf("%d", &dis);
+
+	v = 60 * (dis / min);
+
+	printf("평균 속력은 %.1lf km/h입니다. ", v);
+
+	if (v >= 100) {
+		printf("구간 단속 과속입니다.");
+	}
+
+	return 0;
+}
