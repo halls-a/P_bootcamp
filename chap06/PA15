@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <math.h>
+
+// 코드 문제 확인
+
+int main() {
+
+	int i = 1, num = 1357;
+
+	while (1) {
+		round_pos(num, i);
+
+		if (round_pos(num, i) == 0) {
+			break;
+		}
+		printf("%d번째 자리에서 반올림한 결과: %d", i, round_pos(num, i));
+
+		i++;
+	}
+
+	return 0;
+}
+
+int round_pos(int num, int r) {
+
+	if (num / pow(10, r) == 0) {
+		return 0;
+	}
+
+	return num / pow(10, r) * pow(10, r);
+}
