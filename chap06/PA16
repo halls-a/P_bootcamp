@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+// 문제 방향성 다시 체크
+
+int main() {
+
+	int num;
+
+	printf("정수? ");
+	scanf("%x", &num);
+
+	is_bit_set(num);
+
+	return 0;
+}
+
+int is_bit_set(int num) {
+
+
+}
