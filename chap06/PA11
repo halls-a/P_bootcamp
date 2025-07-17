@@ -1,0 +1,41 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+double calculator(double num1, double num2, char calc);
+
+int main() {
+
+	double num1, num2;
+	char calculation;
+
+	while (1) {
+		printf("수식 (0 0 0 입력 시 종료)? ");
+		scanf("%lf %c %lf", &num1, &calculation, &num2);
+
+		if (calculation == '0') {
+			break;
+		}
+
+		calculator(num1, num2, calculation);
+
+		printf("%lf\n", calculator(num1, num2, calculation));
+	}
+
+	return 0;
+}
+
+double calculator(double num1, double num2, char calc) {
+
+	if (calc == '+') {
+		return num1 + num2;
+	}
+	else if (calc == '-') {
+		return num1 - num2;
+	}
+	else if (calc == '*') {
+		return num1 * num2;
+	}
+	else if (calc == '/') {
+		return num1 / num2;
+	}
+}
