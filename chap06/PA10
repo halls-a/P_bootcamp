@@ -1,0 +1,35 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int random();
+
+int main() {
+
+	int sum = 0;
+
+	printf("0~99사이의 임의의 정수를 10개 생성해서 합계를 구합니다.\n");
+
+	for (int i = 1; i <= 10; i++) {
+		random();
+		printf("%d ", random());
+
+		sum += random();
+	}
+
+	printf("\n합계: %d", sum);
+
+	return 0;
+}
+
+int random() {
+
+	int num;
+
+	again: num = rand();
+
+	if (num >= 100) {
+		goto again;
+	}
+	return num;
+}
