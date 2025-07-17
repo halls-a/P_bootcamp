@@ -1,0 +1,46 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+//실행이 두번씩 됨;
+
+int choose_menu(int c);
+
+int main() {
+
+	int choice;
+
+	while (1) {
+		printf("[1.파일 열기 2.파일 저장 3.인쇄 0.종료] 선택? ");
+		scanf("%d", &choice);
+
+		if (choice == 0) {
+			return 0;
+		}
+
+		choose_menu(choice);
+
+		if (choose_menu(choice) == 1) {
+			printf("잘못 입력했습니다.");
+		}
+	}
+
+	return 0;
+}
+
+int choose_menu(int c) {
+	if (c == 1) {
+		printf("파일 열기를 수행합니다.\n");
+		return 0;
+	}
+	else if (c == 2) {
+		printf("파일 저장을 수행합니다.\n");
+		return 0;
+	}
+	else if (c == 3) {
+		printf("인쇄를 수행합니다.\n");
+		return 0;
+	}
+	else {
+		return 1;
+	}
+}
