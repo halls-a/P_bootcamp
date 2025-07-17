@@ -1,0 +1,62 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+//코드가 실행이 안됨;
+
+int divisors(int num1, int num2, int num3);
+
+int main() {
+
+	int num1 = -1, num2 = -1, num3 = -1;
+
+	while (0 <= num1 < 1000) {
+		num1 = rand();
+	}
+	while (0 <= num2 < 1000) {
+		num2 = rand();
+	}
+	while (0 <= num3 < 1000) {
+		num3 = rand();
+	}
+
+	divisors(num1, num2, num3);
+
+	return 0;
+}
+
+int divisors(int num1, int num2, int num3) {
+	
+	int sum = 0;
+
+	printf("%d의 약수: ", num1);
+	for (int i = 1; i <= num1; i++) {
+		if (num1 % i == 0) {
+			printf("%d ", i);
+			sum++;
+		}
+	}
+	printf("=> 총 %d개\n", sum);
+
+	sum = 0;
+
+	printf("%d의 약수: ", num2);
+	for (int i = 1; i <= num2; i++) {
+		if (num2 % i == 0) {
+			printf("%d ", i);
+			sum++;
+		}
+	}
+	printf("=> 총 %d개\n", sum);
+
+	sum = 0;
+
+	printf("%d의 약수: ", num3);
+	for (int i = 1; i <= num3; i++) {
+		if (num3 % i == 0) {
+			printf("%d ", i);
+			sum++;
+		}
+	}
+	printf("=> 총 %d개", sum);
+}
