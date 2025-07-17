@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+// 계산식 다시 확인
+
+int is_leap_year(int year);
+
+int main() {
+
+	printf("2000~2100년 사이의 윤년\n");
+
+	for (int i = 2000; i <= 2100; i++) {
+		is_leap_year(i);
+		if (is_leap_year(i) == 1) {
+			printf("%d ", i);
+		}
+	}
+
+	return 0;
+}
+
+int is_leap_year(int year) {
+
+	if (year % 4 == 0) {
+		if (year % 100 != 0) {
+			if (year % 400 == 0) {
+				return 1;
+			}
+		}
+	}
+}
