@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+// 이것도;
+
+int main() {
+
+	int year, month, day;
+
+	while (1) {
+		printf("날짜 (연 월 일)? ");
+		scanf("%d %d %d", &year, &month, &day);
+
+		check_date(year, month, day);
+	}
+
+	return 0;
+}
+
+int check_date(int y, int m, int d) {
+
+
+}
