@@ -1,0 +1,50 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+	unsigned int num1, num2, num3, scale = 100;
+	
+	again1:
+	num1 = rand();
+	again2:
+	num2 = rand();
+	again3:
+	num3 = rand();
+
+	if (num1 > 9999) {
+		goto again1;
+	}
+	if (num2 > 9999) {
+		goto again2;
+	}
+	if (num3 > 9999) {
+		goto again3;
+	}
+
+	graph(num1, scale);
+	printf("%d: ", num1);
+	for (int i = 0; i < graph(num1, scale); i++) {
+		printf("*");
+	}
+	printf("\n");
+	graph(num2, scale);
+	printf("%d: ", num2);
+	for (int i = 0; i < graph(num2, scale); i++) {
+		printf("*");
+	}
+	printf("\n");
+	graph(num3, scale);
+	printf("%d: ", num3);
+	for (int i = 0; i < graph(num3, scale); i++) {
+		printf("*");
+	}
+
+	return 0;
+}
+
+int graph(int data, int scale) {
+
+	return data / scale;
+}
