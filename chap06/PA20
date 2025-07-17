@@ -1,0 +1,48 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+// 반복문을 깨기 위해서 break를 사용했는데 무한반복되어버리는 오류가 발생함. 
+// 종료코드로 오류는 간단하게 해결했지만 왜 이렇게 됐는지 물어봐야함
+
+int main() {
+
+	int use;
+
+	while (1) {
+		printf("월 사용량(kWh)? ");
+		scanf("%d", &use);
+
+		if (use < 0) {
+			return 0;
+		}
+
+		electric_charge(use);
+
+		printf("전기 요금: %d원\n", electric_charge(use));
+	}
+
+	return 0;
+}
+
+int electric_charge(int use) {
+
+	int base;
+
+	if (use <= 200) {
+		use = use * 93.3;
+		base = 910;
+		return use + base;
+	}
+	else if (200 < use <= 400) {
+		use -= 200;
+		use = use * 187.9 + (200 * 93.3);
+		base = 1600;
+		return use + base;
+	}
+	else {
+		use -= 400;
+		use = (use * 280.6 + (200 * 93.3) + (200 * 187.9));
+		base = 7300;
+		return use + base;
+	}
+}
