@@ -1,0 +1,38 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+// 코드적인 문제 확인
+
+int main() {
+
+	int n;
+
+	printf("1~N사이의 소수를 구합니다. N은? ");
+	scanf("%d", &n);
+
+	is_prime(n);
+
+	printf("소수는 모두 %d개 입니다.", is_prime(n));
+
+	return 0;
+}
+
+int is_prime(int N) {
+	int sum = 0, T_F = 1;
+	
+	for (int i = 2; i <= N; i++) {
+		for (int j = 2; j * j <= i; j++) {
+			if (i % j == 0) {
+				T_F = 0;
+				break;
+			}
+		}
+
+		if (T_F) {
+			printf("%d ", i);
+			sum++;
+		}
+	}
+
+	return sum;
+}
